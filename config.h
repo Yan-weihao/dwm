@@ -87,9 +87,16 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+
 	{ Mod1Mask,                     XK_h,      setmfact,       {.f = -0.05} },
 	{ Mod1Mask,                     XK_l,      setmfact,       {.f = +0.05} },
+//移动窗口为主窗口
+	{ Mod1Mask,                     XK_j,      rotatestack,    {.i = +1 } },
+	{ Mod1Mask,                     XK_k,      rotatestack,    {.i = -1 } },
  
+	{ MODKEY,                       XK_Left,   rotatetags,     {.i = -1 } },
+	{ MODKEY,                       XK_Right,  rotatetags,     {.i = +1 } },
+
 	{ MODKEY|Mod1Mask,              XK_h,      incrgaps,       {.i = +1 } },//此处是vanitygaps的快捷键
 	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,       {.i = -1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
